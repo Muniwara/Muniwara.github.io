@@ -1,32 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
- <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
- <title> GEOG 485L/585L -- My First Map </title> 
+  <title>Muniwara Nurudeen</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .bg-1 {
+      background-color: #1ab7bc;
+      /* Yellow */
+      color: #ffffff;
+    }
+
+    .bg-2 {
+      background-color: #474e5d;
+      /* Dark Blue */
+      color: #ffffff;
+    }
+
+    .bg-3 {
+      background-color: #ffffff;
+      /* White */
+      color: #555555;
+    }
+
+    .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+  </style>
 </head>
-<body> 
- <p> 
-    My first map will appear here:
- </p>
- <div id="mapId" style="height:400px; width: 600px"></div>
- <script>
-       
-      // Bandelier Hall East lat/long: 35.0843° N, 106.6241° W
-      //create a map variable "mymap" that points the map placed in the mapId <div>
-     //zoom the view on Bandelier Hall East building at a 17 zoom level
-     var mymap = L.map('mapId').setView([35.0843,-106.6241],17);
 
-     // create a variable named "osm" that is used to hold OpenStreetMap tile layer
-      var osm = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Muniwara Nurudeen</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#ABOUT">ABOUT</a></li>
+          <li><a href="#RESEARCH">RESERCH</a></li>
+          <li><a href="#MyWebApp">MyWebApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-     // add the OpenStreetMap tile Layer (i.e., the variable osm you defined above) to the map
-     osm.addTo(mymap);
-
-     // add a marker on the tile layer
-     var marker = L.marker([35,0843, -106.6241]).addTo(mymap);
-
-    </script>
-</body>
-</html>
+  <div class="container-fluid bg-1 text-left">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
     
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="treemap.png" alt="Chania">
+          <div class="carousel-caption">
+            <h3>Treemap</h3>
+            <p>A D3 element</p>
+          </div>
+        </div>
+    
+        <div class="item">
+          <img src="Ghana-income.png" alt="Chicago">
+          <div class="carousel-caption">
+            <h3>Ghana Income Distribution</h3>
+            <p>Display of income inequality in Ghana</p>
+          </div>
+        </div>
+    
+        <div class="item">
+          <img src="myimage.jpg" alt="New York">
+          <div class="carousel-caption">
+            <h3>NME!!</h3>
+            <p>We love ABQ!</p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <h3>ABOUT</h3>
+    <div id="ABOUT"></div>
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <img src="myimage.jpg" class="img-responsive" style="width:20%" alt="image">
+
+      <div class="col-sm-8 text-left"></div>
+      <div class="row"></div>
+      <p>I'm currently a graduate student at The University of New Mexico studying for my masters degree in Geography
+        with a concentration in GIScience. <br>
+        I am also the assistant instructor for the GEOG-1175-001 and GEOG-1175-010 (world regional Geography) at UNM
+        Department of
+        Geography and <br>
+        Environmental Studies.
+        <br>
+        <br>
+        My reseach interest includes:
+      <ul>
+        <li> GIScience</li>
+        <li>GEOvisualization</li>
+        <li>Big Data</li>
+        <li>Spatial Analysis </li>
+        <li>Environmental management</li>
+        <li>Remote Sensing</li>
+        <li>Photogrammetry</li>
+        <li>Webdevelopment</li>
+      </ul>
+      <br>
+      I am also a great team person and love to learn new things especially in a world that is always advancing in
+      <br>
+       the area of scince and technology. I am always opened to learn new skills that would help my personal and <br>
+       carreer development.
+      </p>
+
+      <div class="container-fluid bg-2 text-center">
+        <h3>RESEARCH</h3>
+        <div id="RESEARCH"></div>
+        <p>Click here (<a target="blank" href="research_page.html">RESERCH</a>) to visit my research page to learn more about my current and past <br>
+          research, and to also see my CV</p>
+      </div>
+
+      <div class="container-fluid bg-3 text-center">
+        <h3>MyWebApp</h3>
+        <div id="MyWebApp"></div>
+        <p>Click here (<a target="blank" href="MyWebPage.html">MyWebApp</a>) to visit my WebApp page
+        <br> <br>
+      Feel free to contact me <br>
+  nmuniwara01@gmail.com (personal email) <br>
+mnurudeen@unm.edu (UNM email)</p>
+      </div>
+    </div>
+    <footer class="container-fluid-footer-1  text-center">
+
+      <p class="small">Code by MUNIWARA NURUDEEN <br>
+        Made with resources from W3, Bootstrap, jQuery and guidance from Dr. Liping Yang</p>
+    </footer>
+</body>
+
+</html>
